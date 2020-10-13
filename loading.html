@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="custom.css">
+	<title>loading</title>
+</head>
+<body>
+	<h1><center>animasi loading...!!</center></h1>
+<div class="outer"></div>
+<div class="inner">
+	<span>0%</span>
+</div>
+<script type="text/javascript">
+	let outer = document.querySelector('.outer');
+	let inner = document.querySelector('.inner');
+	let span = document.querySelector('span');
+	let count = 0 ;
+
+inner.addEventListener('click', function(){
+	let loading = setInterval(animate, 500);
+	function animate(){
+		if (count == 100) {
+			outer.classList.remove('loadingaktif');
+			clearInterval();
+		}else{
+			count = count + 1;
+			span.textContent = count + '%';
+			outer.classList.add('loadingaktif');
+		}
+	}
+});
+
+</script>
+</body>
+</html>

